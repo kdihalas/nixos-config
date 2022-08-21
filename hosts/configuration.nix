@@ -34,6 +34,7 @@
     usbutils
     killall
     wget
+    dig
   ];
 
   environment.shells = with pkgs; [ bashInteractive zsh ];
