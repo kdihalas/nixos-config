@@ -11,7 +11,7 @@
   virtualisation.oci-containers = {
     backend = "podman";
     containers = {
-      sabnzbd = {
+      dnsserver = {
         image = "roxedus/ts-dnsserver:latest";
         environment = {
           PUID = "1000";
