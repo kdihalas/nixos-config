@@ -4,7 +4,8 @@
   imports = 
     [(import ./hardware-configuration.nix)]++
     [(import ../../modules/virtualisation/podman.nix)]++
-    [(import ../../modules/services/podman/media/sabnzbd.nix)];
+    [(import ../../modules/services/podman/media/sabnzbd.nix)]++
+    [(import ../../modules/services/podman/media/dnsserver.nix)];
 
     services.openssh.enable = true;
 
