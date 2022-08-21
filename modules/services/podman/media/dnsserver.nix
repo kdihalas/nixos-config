@@ -2,7 +2,7 @@
 
 {
 
-  system.activationScripts.makeSabnzbdDir =
+  system.activationScripts.makeDnsServerDir =
   ''
     mkdir -p /home/media/dnsserver/config
     chown media:media /home/media/dnsserver/config
