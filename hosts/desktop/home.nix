@@ -24,6 +24,11 @@
         theme = "robbyrussell";
         plugins = [ "git" "sudo" ];
       };
+      initExtra = ''
+        export GPG_TTY="$(tty)"
+        gpg-connect-agent updatestartuptty /bye > /dev/null
+        export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+      '';
     };
     git = {
       enable = true;
