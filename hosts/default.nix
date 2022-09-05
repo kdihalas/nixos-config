@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, nur, user, location, protocol, ... }:
+{ lib, inputs, nixpkgs, home-manager, nur, kubectl, user, location, protocol, ... }:
 
 let
     system = "x86_64-linux";

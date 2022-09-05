@@ -10,6 +10,7 @@
       yubioath-desktop
       gnome.gnome-tweaks 
       gnomeExtensions.appindicator
+      kubectl
     ];
 
     gnome.excludePackages = (with pkgs; [
