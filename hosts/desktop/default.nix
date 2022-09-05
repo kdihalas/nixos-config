@@ -11,6 +11,7 @@
       gnome.gnome-tweaks 
       gnomeExtensions.appindicator
       kubectl
+      krew
     ];
 
     gnome.excludePackages = (with pkgs; [
