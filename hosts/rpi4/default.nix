@@ -5,7 +5,7 @@
     [(import ./hardware-configuration.nix)]++
     [(import ../../modules/virtualisation/podman.nix)]++
     [(import ../../modules/services/podman/media/sabnzbd.nix)]++
-    [(import ../../modules/services/podman/media/dnsserver.nix)];
+    [(import ../../modules/services/podman/infra/dnsserver.nix)];
 
     services.openssh.enable = true;
 
