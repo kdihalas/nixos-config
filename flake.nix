@@ -17,12 +17,9 @@
     nur = {
       url = "github:nix-community/NUR";                                   
     };
-
-    # Local flakes
-    kubectl.url = "path:./nix/kubectl";
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, kubectl, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nur, ... }:
     let
       user = "kostas";
       location = "$HOME/.setup";
@@ -37,7 +34,7 @@
       nixosConfigurations = (
         import ./hosts {
           inherit (nixpkgs) lib;
-          inherit inputs nixpkgs home-manager nur user location protocol kubectl;
+          inherit inputs nixpkgs home-manager nur user location protocol;
         }
       );
     };
