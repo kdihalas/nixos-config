@@ -3,7 +3,8 @@
 {
   imports =
     [(import ./hardware-configuration.nix)]++
-    (import ../../modules/desktop);
+    (import ../../modules/desktop)++
+    (import ../../modules/dev);
 
   environment = {
     systemPackages = with pkgs; [
