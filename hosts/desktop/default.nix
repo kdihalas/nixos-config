@@ -13,6 +13,7 @@
       gnomeExtensions.appindicator
       kubectl
       krew
+      docker-compose_2
     ];
 
     gnome.excludePackages = (with pkgs; [
