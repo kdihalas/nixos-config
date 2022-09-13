@@ -13,7 +13,8 @@
       gnomeExtensions.appindicator
       kubectl
       krew
-      docker-compose_2
+      nyancat
+      docker-compose
     ];
 
     gnome.excludePackages = (with pkgs; [
