@@ -3,6 +3,7 @@
 {
   imports =
     [(import ./hardware-configuration.nix)]++
+    [(import ../../modules/virtualisation/docker.nix)]++
     (import ../../modules/desktop);
 
   environment = {
