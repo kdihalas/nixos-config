@@ -4,6 +4,7 @@
   imports =
     [(import ./hardware-configuration.nix)]++
     [(import ../../modules/virtualisation/docker.nix)]++
+    [(import ../../modules/services/vpn/sstp.nix)]++
     (import ../../modules/desktop);
 
   environment = {
@@ -15,6 +16,7 @@
       krew
       nyancat
       docker-compose
+      direnv
     ];
 
     gnome.excludePackages = (with pkgs; [
@@ -22,6 +24,7 @@
     ]) ++ (with pkgs.gnome; [
       gnome-music
       gnome-terminal
+      gnome-boxes
       evince
       geary
       gnome-contacts

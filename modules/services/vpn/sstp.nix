@@ -2,7 +2,7 @@
 
 {
     environment.systemPackages = [
-      sstp
-      networkmanager-sstp
+      pkgs.sstp
+      pkgs.networkmanager-sstp
     ];
 }
