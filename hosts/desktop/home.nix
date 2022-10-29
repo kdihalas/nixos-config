@@ -6,6 +6,7 @@
       flatpak
       steam
       bottles
+      brave
     ];
   };
 

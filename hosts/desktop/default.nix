@@ -11,7 +11,9 @@
     systemPackages = with pkgs; [
       yubioath-desktop
       gnome.gnome-tweaks 
+      gnome.gnome-boxes
       gnomeExtensions.appindicator
+      gnomeExtensions.espresso
       kubectl
       krew
       nyancat
@@ -24,7 +26,6 @@
     ]) ++ (with pkgs.gnome; [
       gnome-music
       gnome-terminal
-      gnome-boxes
       evince
       geary
       gnome-contacts
@@ -47,6 +48,11 @@
         useOSProber = true;
       };
     };
+  };
+
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
   };
 
   services = {
