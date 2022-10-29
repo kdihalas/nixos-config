@@ -19,6 +19,7 @@
       nyancat
       docker-compose
       direnv
+      freerdp
     ];
 
     gnome.excludePackages = (with pkgs; [
