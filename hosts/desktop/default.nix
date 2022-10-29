@@ -14,12 +14,13 @@
       gnome.gnome-boxes
       gnomeExtensions.appindicator
       gnomeExtensions.espresso
+      gnomeExtensions.rdesktop-launcher
       kubectl
       krew
       nyancat
       docker-compose
       direnv
-      freerdp
+      rdesktop
     ];
 
     gnome.excludePackages = (with pkgs; [
