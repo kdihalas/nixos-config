@@ -13,6 +13,5 @@
       };
     };
   };
-
-  users.extraGroups.vboxusers.members = [ "kostas" ]
+  users.extraGroups.vboxusers.members = [ "kostas" ];
 }
