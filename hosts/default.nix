@@ -1,8 +1,14 @@
-{ lib, inputs, nixpkgs, home-manager, nur, user, location, protocol, ... }:
+{ lib, inputs, nixpkgs, unstable, home-manager, nur, user, location, protocol, ... }:
 
 let
     system = "x86_64-linux";
     pkgs = import nixpkgs {
+        inherit system;
+        # Allow proprietary software
+        config.allowUnfree = true;
+    };
+
+    upkgs = import unstable {
         inherit system;
         # Allow proprietary software
         config.allowUnfree = true;
@@ -14,7 +20,7 @@ in
     desktop = lib.nixosSystem {                               
         inherit system;
         # Pass flake variable
-        specialArgs = { inherit inputs user location protocol; }; 
+        specialArgs = { inherit inputs upkgs user location protocol; }; 
         # Modules that are used.
         modules = [                                             
             nur.nixosModules.nur

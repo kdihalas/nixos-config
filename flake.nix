@@ -22,7 +22,7 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, ... }:
+  outputs = inputs @ { self, nixpkgs, unstable, home-manager, nur, ... }:
     let
       user = "kostas";
       location = "$HOME/.setup";
@@ -32,12 +32,16 @@
         inherit system;
         config.allowUnfree = true;
       };
+      upkgs = import unstable {
+        inherit system;
+        config.allowUnfree = true;
+      };
       lib = nixpkgs.lib;
     in {
       nixosConfigurations = (
         import ./hosts {
-          inherit (nixpkgs) lib;
-          inherit inputs nixpkgs home-manager nur user location protocol;
+          inherit (pkgs upkgs) lib;
+          inherit inputs nixpkgs unstable home-manager nur user location protocol;
         }
       );
     };

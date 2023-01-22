@@ -1,4 +1,4 @@
-{ pkgs, unstable, lib, user, ... }:
+{ pkgs, upkgs, lib, user, ... }:
 
 {
   imports =
@@ -22,7 +22,7 @@
       docker-compose
       direnv
       rdesktop
-      unstable.sapling
+      upkgs.sapling
     ];
 
     gnome.excludePackages = (with pkgs; [
