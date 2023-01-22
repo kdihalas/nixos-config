@@ -7,6 +7,9 @@
     # Nix packages
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
 
+    # Unstable Packages
+    unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
     # User Package Management
     home-manager = {
       url = github:nix-community/home-manager/release-22.05;
