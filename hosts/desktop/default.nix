@@ -22,6 +22,13 @@
       docker-compose
       direnv
       rdesktop
+      gh
+      upkgs.consul
+      upkgs.vault
+      upkgs.nomad
+      upkgs.nomad-pack
+      upkgs.terraform
+      upkgs.packer
       upkgs.sapling
     ];
 
