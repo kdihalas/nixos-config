@@ -8,6 +8,7 @@
       bottles
       brave
     ];
+    stateVersion = "22.11";
   };
 
   services = {
