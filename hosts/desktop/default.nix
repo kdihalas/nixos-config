@@ -16,7 +16,6 @@
       gnomeExtensions.appindicator
       gnomeExtensions.espresso
       gnomeExtensions.rdesktop-launcher
-      gnomeExtensions.cloudflare-warp-quick-settings
       kubectl
       krew
       nyancat
