@@ -61,6 +61,17 @@
     };
   };
 
+  systemd.services.warp = {
+    enable = true;
+    unitConfig = {
+      Type = "simple";
+    };
+    serviceConfig = {
+      ExecStart = "${pkgs.cloudflare-warp}/bin/warp-svc";
+    };
+    wantedBy = ["multi-user.target"];
+  };
+
   xdg.portal = {
     enable = true;
     wlr.enable = true;
