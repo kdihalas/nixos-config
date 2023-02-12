@@ -4,7 +4,6 @@
   home = {
     packages = with pkgs; [
       flatpak
-      steam
       brave
     ];
     stateVersion = "22.11";
