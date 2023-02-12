@@ -5,7 +5,6 @@
     packages = with pkgs; [
       flatpak
       steam
-      bottles
       brave
     ];
     stateVersion = "22.11";
