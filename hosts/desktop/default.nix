@@ -23,13 +23,6 @@
       direnv
       gh
       cloudflare-warp
-      vscode
-      (vscode-with-extensions.override {
-        vscodeExtensions = with vscode-extensions; [
-          ms-vscode.cpptools
-          llvm-vs-code-extensions.vscode-clangd
-        ];
-      })
       upkgs.consul
       upkgs.vault
       upkgs.nomad
