@@ -17,6 +17,9 @@
     vscode = {
       enable = true;
       package = pkgs.vscode;
+      extensions = [
+        vscode-extensions.ms-vscode.cpptools
+      ];
     };
     zsh = {
       enable = true;
