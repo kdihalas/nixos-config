@@ -47,7 +47,7 @@
         interfaces = [
           "enp39s0"
         ];
-      }
+      };
     };
   };
   # networking.interfaces.enp39s0.useDHCP = lib.mkDefault true;
