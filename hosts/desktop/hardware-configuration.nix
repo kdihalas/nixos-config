@@ -41,14 +41,6 @@
     useDHCP = lib.mkDefault true;
     hostName = "kostas-nixos"; # Define your hostname.
     firewall.enable = false;
-
-    bridges = {
-      virbr0 = {
-        interfaces = [
-          "enp39s0"
-        ];
-      };
-    };
   };
   # networking.interfaces.enp39s0.useDHCP = lib.mkDefault true;
 
