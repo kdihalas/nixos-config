@@ -10,5 +10,5 @@
   users.extraGroups = {
     libvirtd.members = [ "kostas" ];
     qemu-libvirtd.members = ["kostas"];
-  }
+  };
 }
