@@ -3,8 +3,8 @@
 {
   imports =
     [(import ./hardware-configuration.nix)]++
-    [(import ../../modules/virtualisation/docker.nix)]++
-    [(import ../../modules/virtualisation/virtualbox.nix)]++
+    [(import ../../modules/virtualisation/podman.nix)]++
+    [(import ../../modules/virtualisation/libvirt.nix)]++
     [(import ../../modules/services/vpn/sstp.nix)]++
     (import ../../modules/desktop);
 
