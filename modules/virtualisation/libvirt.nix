@@ -11,4 +11,10 @@
     libvirtd.members = [ "kostas" ];
     qemu-libvirtd.members = ["kostas"];
   };
+  environment = {
+    systemPackages = with pkgs; [
+      virt-manager
+      virt-top
+    ];
+  };
 }
