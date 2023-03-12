@@ -23,6 +23,7 @@
       direnv
       gh
       tmux
+      su
       podman-compose
       cloudflare-warp
       upkgs.consul
