@@ -22,6 +22,7 @@
       docker-compose
       direnv
       gh
+      podman-compose
       cloudflare-warp
       upkgs.consul
       upkgs.vault
