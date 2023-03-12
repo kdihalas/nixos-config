@@ -44,6 +44,9 @@
         init.defaultBranch = "main";
       };
     };
+    tmux = {
+      enable true;
+    };
     home-manager.enable = true;
   };
 }

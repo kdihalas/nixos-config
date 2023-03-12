@@ -22,7 +22,6 @@
       docker-compose
       direnv
       gh
-      tmux
       cloudflare-warp
       upkgs.consul
       upkgs.vault
