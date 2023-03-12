@@ -3,7 +3,7 @@
 {
   imports =
     [(import ./hardware-configuration.nix)]++
-    [(import ../../modules/virtualisation/podman.nix)]++
+    [(import ../../modules/virtualisation/docker.nix)]++
     [(import ../../modules/virtualisation/libvirt.nix)]++
     [(import ../../modules/services/vpn/sstp.nix)]++
     (import ../../modules/desktop);
@@ -23,8 +23,6 @@
       direnv
       gh
       tmux
-      su
-      podman-compose
       cloudflare-warp
       upkgs.consul
       upkgs.vault
