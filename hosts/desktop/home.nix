@@ -45,7 +45,7 @@
       };
     };
     tmux = {
-      enable true;
+      enable = true;
     };
     home-manager.enable = true;
   };
