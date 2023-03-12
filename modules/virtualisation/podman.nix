@@ -8,6 +8,11 @@
       dockerSocket = {
         enable = true;
       };
+      defaultNetwork = {
+        dnsname = {
+          enable = true;
+        };
+      };
     };
   };
 }

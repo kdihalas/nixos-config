@@ -22,6 +22,7 @@
       docker-compose
       direnv
       gh
+      tmux
       podman-compose
       cloudflare-warp
       upkgs.consul
