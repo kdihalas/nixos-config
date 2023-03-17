@@ -41,6 +41,8 @@
       userName = "kdihalas";
       userEmail = "kdihalas@gmail.com";
       extraConfig = {
+        commit.gpgsign = true;
+        user.signingkey = "C71B7C312DDFBF9D";
         init.defaultBranch = "main";
       };
     };

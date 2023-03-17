@@ -23,6 +23,7 @@
       direnv
       gh
       cloudflare-warp
+      upkgs.vagrant
       upkgs.consul
       upkgs.vault
       upkgs.nomad
