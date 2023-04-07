@@ -1,4 +1,4 @@
-{ pkgs, upkgs, lib, user, ... }:
+{ pkgs, upkgs, lib, user, lanzaboote, ... }:
 
 {
   imports =
@@ -23,6 +23,8 @@
       direnv
       gh
       cloudflare-warp
+      sbctl
+      niv
       upkgs.consul
       upkgs.vault
       upkgs.nomad
@@ -45,18 +47,13 @@
   };
 
   boot = {
-    plymouth.enable = true;
     loader = {
+      systemd-boot = {
+        enable = true;
+      };
       efi = {
         canTouchEfiVariables = true;
         efiSysMountPoint = "/boot";
-      };
-      grub = {
-        devices = ["nodev"];
-        efiSupport = true;
-        enable = true;
-        version = 2;
-        useOSProber = true;
       };
     };
   };

@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, unstable, home-manager, nur, user, location, protocol, ... }:
+{ lib, inputs, nixpkgs, unstable, home-manager, nur, user, location, protocol, lanzaboote, ... }:
 
 let
     system = "x86_64-linux";
@@ -21,9 +21,11 @@ in
         inherit system;
         # Pass flake variable
         specialArgs = { inherit inputs upkgs user location protocol; }; 
+
         # Modules that are used.
         modules = [                                             
             nur.nixosModules.nur
+            # lanzaboote.nixosModules.lanzaboote
             ./desktop
             ./configuration.nix
 
@@ -37,28 +39,5 @@ in
                 };
             }
         ];
-    }; 
-
-    # RPI4 profile
-    rpi4 = lib.nixosSystem {                               
-        system = "aarch64-linux";
-        # Pass flake variable
-        specialArgs = { inherit inputs user location protocol; }; 
-        # Modules that are used.
-        modules = [                                             
-            nur.nixosModules.nur
-            ./rpi4
-            ./configuration.nix
-
-            # Home-Manager module that is used.
-            home-manager.nixosModules.home-manager {              
-                home-manager.useGlobalPkgs = true;
-                home-manager.useUserPackages = true;
-                home-manager.extraSpecialArgs = { inherit user protocol; };  # Pass flake variable
-                home-manager.users.${user} = {
-                    imports = [(import ./home.nix)] ++ [(import ./rpi4/home.nix)];
-                };
-            }
-        ];
-    }; 
+    };  
 }

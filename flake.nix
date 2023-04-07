@@ -20,9 +20,15 @@
     nur = {
       url = "github:nix-community/NUR";                                   
     };
+
+    # Secure boot
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote";
+      inputs.nixpkgs.follows = "unstable";
+    };
   };
 
-  outputs = inputs @ { self, nixpkgs, unstable, home-manager, nur, ... }:
+  outputs = inputs @ { self, nixpkgs, unstable, home-manager, nur, lanzaboote, ... }:
     let
       user = "kostas";
       location = "$HOME/.setup";
@@ -41,7 +47,7 @@
       nixosConfigurations = (
         import ./hosts {
           inherit (pkgs upkgs) lib;
-          inherit inputs nixpkgs unstable home-manager nur user location protocol;
+          inherit inputs nixpkgs unstable home-manager nur user location protocol lanzaboote;
         }
       );
     };
